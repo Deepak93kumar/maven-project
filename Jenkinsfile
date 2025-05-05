@@ -15,6 +15,7 @@ pipeline {
           withSonarQubeEnv(credentialsId: 'sonarconnection', installationName: 'sonar') {
           sh 'mvn package sonar:sonar'}
           }
+          
         }
 
     }
