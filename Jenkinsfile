@@ -13,7 +13,7 @@ pipeline {
           withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
           sh 'mvn package'
           }
-    
+      }
         }
     stage('deploy job') //valiadte compile and then package
     {
@@ -23,7 +23,6 @@ pipeline {
          }
     
         }
-      }
     }
   }
 }
