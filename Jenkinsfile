@@ -30,7 +30,7 @@ pipeline {
     stage('push docker image to dockerhub') {
       steps {
         
-        ithDockerRegistry(credentialsId: 'DockerHubCredentials', url: 'https://index.docker.io/v1/') {
+        withDockerRegistry(credentialsId: 'DockerHubCredentials', url: 'https://index.docker.io/v1/') {
             
                 sh 'docker push deepak354/deepak:latest'
         }
