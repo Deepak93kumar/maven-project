@@ -32,7 +32,7 @@ pipeline {
     stage('push docker image to dockerhub') {
       steps {
         
-        withDockerRegistry(credentialsId: 'DockerHubCredentials', url: 'https://index.docker.io/v1/') {
+        withDockerRegistry(credentialsId: 'DockerHubCredentials') {
             
                 sh 'docker push deepak354/deepak:latest'
             
