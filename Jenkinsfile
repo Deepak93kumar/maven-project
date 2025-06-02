@@ -35,7 +35,7 @@ pipeline {
         withDockerRegistry(credentialsId: 'DockerHubCredentials') {
             
                 sh 'docker push deepak354/deepak:latest'
-            
+          
         }
       }
     }
