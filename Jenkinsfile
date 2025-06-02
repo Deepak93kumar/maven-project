@@ -33,7 +33,6 @@ pipeline {
         ithDockerRegistry(credentialsId: 'DockerHubCredentials', url: 'https://index.docker.io/v1/') {
             
                 sh 'docker push deepak354/deepak:latest'
-          
         }
       }
     }
